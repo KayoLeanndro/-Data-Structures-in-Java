@@ -1,7 +1,9 @@
 # Data-Structures-in-Java
 Repositório criado para fins estudantis, criado para me aprofundar em estrutura de dados na linguagem JAVA.
 
-Conteudo do repositorio:
+# Conteúdo:
+
+### Estrutura de dados 
 - Vetores(Arrays)
 - Pilhas(Stacks)
 - Filas(Queues)
@@ -11,3 +13,16 @@ Conteudo do repositorio:
 - Tabelas de Hashing(HashTables)
 - Arvores(Trees)
 - Grafos(Graphs)
+
+### Algoritmos
+- Algoritmos de Ordenação
+  *  Bolha (Bubbe Sort)
+  *  Seleção (Selection Sort)
+  *  Inserção (Inserction Sort)
+  *  Merge Sort
+  *  Quick Sort
+
+- Algoritmos de Busca/Pesquisa
+   * Busca Sequencial
+   * Busca Binaria
+
