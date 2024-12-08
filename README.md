@@ -3,7 +3,12 @@ Repositório criado para fins estudantis, criado para me aprofundar em estrutura
 
 # Conteúdo:
 
-O que são estrutura de dados:
+### O que são estrutura de dados?
+É uma estrutura de dados que armazena/organiza dados/infomações de modo que possam ser acessados e manipulados de forma eficiente.
+
+![Imagem das estruturas de dados](images/estruturaDados.png)
+
+
 
 ### Estrutura de dados 
 - Vetores(Arrays)
@@ -28,3 +33,14 @@ O que são estrutura de dados:
    * Busca Sequencial
    * Busca Binaria
 
+#### Qual estrutura de dados você usaria ?
+
+- Buscar uma coleção de registros do banco de dados ?
+
+- Registro de chamadas de métodos e funções de um compilador ?
+
+- Sistema de bancos, hospitais ?
+
+- Manipular uma coleção de registros únicos ?
+
+- Organizar Relacionamentos de redes sociais (Twitter, Facebook) ?
