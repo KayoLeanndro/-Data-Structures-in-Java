@@ -3,6 +3,8 @@ Repositório criado para fins estudantis, criado para me aprofundar em estrutura
 
 # Conteúdo:
 
+O que são estrutura de dados:
+
 ### Estrutura de dados 
 - Vetores(Arrays)
 - Pilhas(Stacks)
