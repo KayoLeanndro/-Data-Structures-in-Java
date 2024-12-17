@@ -4,12 +4,13 @@ public class VetorMain {
 
         try {
             vetor.adicionaElemento("1");
-            vetor.adicionaElemento("2");
-            vetor.adicionaElemento("3");    
+            vetor.adicionaElemento("2");  
         } catch (Exception e) {
             e.printStackTrace();
         }
+
+        System.out.println(vetor.tamanho());
         
-    
+        System.out.println(vetor.toString());
     }
 }

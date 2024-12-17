@@ -38,10 +38,52 @@ Repositório criado para fins estudantis, criado para me aprofundar em estrutura
         System.out.println(elemento);
       }
       ```
-          
+
+   - **Classe Vetor utilizada**
+
+  ```java
+    public class Vetor{
+    private String[] elementos;
+    private int tamanho;
+
+      public Vetor(int capacidade){
+          this.elementos = new String[capacidade];
+          this.tamanho = 0;
+      }
+    }
+  ```
+
   - **Adicionando elemento no final do vetor**  
+
+  ```java
+     public void adicionaElemento(String elemento) throws Exception{
+        //Itera os elementos dentro do array e aumenta o tamanho até o seu limite total
+        if(this.tamanho < this.elementos.length){
+            this.elementos[this.tamanho] = elemento;
+            this.tamanho++;
+        }
+        else{
+            throw new Exception("Vetor já está cheio, não é possivel adicionar mais elementos");
+        }
+    }
+  ```
+
   - **Verificando a quantidade de elementos no vetor**  
+  ```java
+    public int tamanho(){
+        return this.tamanho;
+    }
+  ``` 
   - **Imprimindo os elementos do vetor**  
+  ```java
+    @Override
+    public String toString(){
+        return "Vetor [elementos=" + Arrays.toString(elementos) 
+                        + ", tamanho=" 
+                        + tamanho + "]";
+    }
+  ``` 
+
   - **Verificando se um elemento existe no vetor**  
   - **Adicionando elemento em qualquer posição**  
   - **Adicionando mais capacidade ao vetor**  
