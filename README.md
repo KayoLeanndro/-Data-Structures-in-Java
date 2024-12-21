@@ -85,6 +85,8 @@ Repositório criado para fins estudantis, criado para me aprofundar em estrutura
   ``` 
 
   - **Verificando se um elemento existe no vetor**  
+
+
   - **Adicionando elemento em qualquer posição**  
   - **Adicionando mais capacidade ao vetor**  
   - **Removendo elemento do vetor**  
@@ -110,9 +112,52 @@ Repositório criado para fins estudantis, criado para me aprofundar em estrutura
   *  Merge Sort
   *  Quick Sort
 
-- Algoritmos de Busca/Pesquisa
-   * Busca Sequencial
-   * Busca Binaria
+<br>
+
+<details>
+  <summary>Algoritmos de Busca/Pesquisa</summary>
+
+  ### Busca Sequencial
+  - Percorre a lista elemento por elemento até encontrar o valor desejado ou atingir o final da lista.
+  - Ideal para listas pequenas ou não ordenadas.
+
+    ### Métodos de Busca sequencial no Vetor
+  - **Elemento Existe no Vetor (com ForEach):**
+    ```java
+    public boolean elementoExisteNoVetorForEach(String elemento) {
+        for (String item : elementos) {
+            if (item.equals(elemento.toLowerCase())) {
+                return true;
+            }
+        }
+        return false;
+    }
+    ```
+    - Verifica se um elemento existe no vetor usando um laço `for-each`.
+    - Retorna `true` se o elemento for encontrado, caso contrário, `false`.
+
+  - **Elemento Existe no Vetor (com For):**
+    ```java
+    public int elementoExisteNoVetorFor(String elemento) {
+        for (int i = 0; i < this.elementos.length; i++) {
+            if (elementos[i].equals(elemento)) {
+                return i;
+            }
+        }
+        return -1;
+    }
+    ```
+    - Busca o índice do elemento no vetor usando um laço `for`.
+    - Retorna o índice do elemento se encontrado, ou `-1` se não existir.
+
+  ### Busca Binária
+  - Divide a lista ordenada em metades sucessivas para localizar o elemento desejado.
+  - Muito eficiente, com complexidade O(log n), mas exige que a lista esteja previamente ordenada.
+
+</details>
+
+
+
 
 #### Qual estrutura de dados você usaria ?
 
