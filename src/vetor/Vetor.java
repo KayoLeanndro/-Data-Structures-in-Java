@@ -48,22 +48,40 @@ public class Vetor {
         return -1;
     }
 
-    //0 1 2 3 4 5 6 = tamanho é 5
-    //B C E F G + +
-    public boolean adicionar(int posicao, String elemento){
-        
-        if(!(posicao >= 0 && posicao < this.tamanho)){
+    // Representação visual da adição do elemento na posição escolhida no vetor.
+    // Quero adicionar Z na posicao 2
+
+    // 0 1 2 3 4 5 6 = tamanho do array é 5
+    // B C E F G + +
+
+    // Overloading de metodo
+    public boolean adicionar(int posicao, String elemento) {
+        // Verifica se a posição está dentro das posições disponiveis dentro do vetor
+        if (!(posicao < this.tamanho && posicao >= 0)) {
             throw new IllegalArgumentException("Posição invalida");
         }
-
-        //Move todos os elementos
-        for(int i = this.tamanho - 1; i >= posicao; i--){
+        // Loop do final do vetor até a posição que o novo elemento será inserido
+        // int i = this.tamanho - 1 =
+        // this.elementos[i + 1] = this.elementos[i]; =
+        for (int i = this.tamanho - 1; i >= posicao; i--) {
             this.elementos[i + 1] = this.elementos[i];
         }
         this.elementos[posicao] = elemento;
-        this.tamanho++;
-        
+
         return false;
+    }
+
+    // Metodo que só será utilizado dentro da classe vetor
+    private void aumentarCapacidade() {
+        if (this.tamanho == this.elementos.length) {
+            // A melhor forma de aumentar a capacidade do vetor é dobrando o tamanho dele
+            String[] elementosNovos = new String[this.elementos.length * 2];
+
+            for (int i = 0; i <= this.elementos.length; i++) {
+                elementosNovos[i] = elementos[i];
+            }
+
+        }
     }
 
     @Override
