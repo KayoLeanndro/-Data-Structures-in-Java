@@ -124,6 +124,7 @@ Repositório criado para fins estudantis, criado para me aprofundar em estrutura
     ### Métodos de Busca sequencial no Vetor
   - **Elemento Existe no Vetor (com ForEach):**
     ```java
+    //Tipo da variavel do parametro pode ser qualquer tipo de dado, desde que seja do mesmo tipo do array que está sendo buscado.
     public boolean elementoExisteNoVetorForEach(String elemento) {
         for (String item : elementos) {
             if (item.equals(elemento.toLowerCase())) {
@@ -138,6 +139,7 @@ Repositório criado para fins estudantis, criado para me aprofundar em estrutura
 
   - **Elemento Existe no Vetor (com For):**
     ```java
+    //Tipo da variavel do parametro pode ser qualquer tipo de dado, desde que seja do mesmo tipo do array que está sendo buscado.
     public int elementoExisteNoVetorFor(String elemento) {
         for (int i = 0; i < this.elementos.length; i++) {
             if (elementos[i].equals(elemento)) {
