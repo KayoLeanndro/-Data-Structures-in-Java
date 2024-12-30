@@ -1,47 +1,54 @@
+import java.lang.reflect.Array;
 import java.util.Arrays;
 
-public class Vetor {
-    private String[] elementos;
+public class VetorGenerics<T> {
+    private T[] elementos;
     private int tamanho;
 
-    public Vetor(int capacidade) {
-        this.elementos = new String[capacidade];
+    // Uso mais elegante de instaciar um tipo Generics Type
+    public VetorGenerics(int capacidade) {
+        this.elementos = (T[]) new Object[capacidade];
         this.tamanho = 0;
     }
 
-    public void adicionaElemento(String elemento) throws Exception {
+    public VetorGenerics(Class<T> tipoClasse, int capacidade) {
+        this.elementos = (T[]) Array.newInstance(tipoClasse, capacidade);
+        this.tamanho = 0;
+    }
+
+    public boolean adicionaElemento(T elemento) {
         this.aumentarCapacidade();
         if (this.tamanho < this.elementos.length) {
-            this.elementos[this.tamanho] = elemento.toUpperCase();
+            this.elementos[this.tamanho] = elemento;
             this.tamanho++;
-        } else {
-            throw new Exception("Vetor já está cheio, não é possivel adicionar mais elementos");
+            return true;
         }
+        return false;
     }
 
     public int tamanho() {
         return this.tamanho;
     }
 
-    public String busca(int posicao) {
+    public Object busca(int posicao) {
         if (!(posicao >= 0 && posicao < this.tamanho)) {
             throw new IllegalArgumentException("Posição invalida");
         }
         return this.elementos[posicao];
     }
 
-    public boolean elementoExisteNoVetorForEach(String elemento) {
-        for (String item : elementos) {
-            if (item.equals(elemento.toUpperCase())) {
+    public boolean elementoExisteNoVetorForEach(T elemento) {
+        for (T item : elementos) {
+            if (item.equals(elemento)) {
                 return true;
             }
         }
         return false;
     }
 
-    public int elementoExisteNoVetorFor(String elemento) {
+    public int elementoExisteNoVetorFor(T elemento) {
         for (int i = 0; i < this.elementos.length; i++) {
-            if (elementos[i].equals(elemento.toUpperCase())) {
+            if (elementos[i].equals(elemento)) {
                 return i;
             }
         }
@@ -55,7 +62,7 @@ public class Vetor {
     // B C E F G + +
 
     // Overloading de metodo
-    public boolean adicionar(int posicao, String elemento) {
+    public boolean adicionar(int posicao, T elemento) {
         // Verifica se a posição está dentro das posições disponiveis dentro do vetor
         if (!(posicao < this.tamanho && posicao >= 0)) {
             throw new IllegalArgumentException("Posição invalida");
@@ -76,10 +83,10 @@ public class Vetor {
     // Metodo que só será utilizado dentro da classe vetor
     private void aumentarCapacidade() {
         if (this.tamanho == this.elementos.length) {
-            // A melhor forma de aumentar a capacidade do vetor é dobrando o tamanho dele
-            // Obs: Depende muito do caso em que você está tentando fazer isso, pode
-            // acarretar um OutOfMemoryError
-            String[] elementosNovos = new String[this.elementos.length * 2];
+
+            // Não é possivel criar um array de tipo generico em java, o tipo `T` não é mais
+            // acessivel em tempo de execução devido ao type erasure
+            T[] elementosNovos = (T[]) new Object[this.elementos.length * 2];
 
             for (int i = 0; i <= this.elementos.length; i++) {
                 elementosNovos[i] = elementos[i];
@@ -119,5 +126,4 @@ public class Vetor {
                 + ", tamanho="
                 + tamanho + "]";
     }
-
 }

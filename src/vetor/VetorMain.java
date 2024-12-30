@@ -30,5 +30,9 @@ public class VetorMain {
         vetor.adicionar(2, "Z");
 
         System.out.println(vetor.toString());
+
+        vetor.remove(0);
+
+        System.out.println(vetor.toString());
     }
 }
