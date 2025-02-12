@@ -14,6 +14,8 @@ Repositório criado para fins estudantis, criado para me aprofundar em estrutura
 
    <details>
   <summary>Vetores (Arrays)</summary>
+
+ ### Um array é uma estrutura de dados que armazena uma coleção de elementos de tal forma que cada um dos elementos possa ser identificado por, pelo menos um indice ou uma chave.
   
   <br>
   
@@ -428,7 +430,48 @@ Repositório criado para fins estudantis, criado para me aprofundar em estrutura
     }
   ```
 
+  ## Listas
 
+  * Mas conhecida como ArrayList, é uma Classe que introduz uma facilidade maior de manipular um Array da forma convencional.
+
+ ``` java
+ArrayList<String> array = new ArrayList<String>();
+        array.add("A");
+        array.add("B");
+        array.add("C");
+
+        // Metodo que adiciona um elemento no index escolhido
+        array.add(1, "Elemento");
+
+        // Metodo de busca de algum elemento no array
+        boolean existe = array.contains("B");
+        if (existe) {
+            System.out.println("O elemento existe no Array");
+        } else {
+            System.out.println("O elemento não existe no Array");
+        }
+
+        // Metodo que busca o index de um determinado parametro passado nos parentesees
+        int pos = array.indexOf("B");
+        if (pos > -1) {
+            System.out.println("Elemento existe no array");
+        } else {
+            System.out.println("O elemento não existe no array");
+        }
+
+        // Metodo que busca o elemento de um determinado index
+        String index = "Elemento do Index: " + array.get(3);
+        System.out.println(index);
+
+        // Metodo que remove um elemento do array e metodo que remove elemento de um
+        // index
+        array.remove("B"); // Elemento/Objeto
+        array.remove(1); // Index
+
+        // Metodo que verifica o tamanho do array
+        int tamanho = array.size();
+        System.out.println(tamanho);
+```
    
 
 
