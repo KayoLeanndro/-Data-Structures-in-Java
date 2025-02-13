@@ -1,3 +1,5 @@
+package vetor;
+
 public class VetorMain {
     public static void main(String[] args) throws Exception {
         Vetor vetor = new Vetor(10);

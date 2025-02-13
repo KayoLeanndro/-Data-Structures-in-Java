@@ -1,5 +1,9 @@
 package atividades;
 
+import java.util.List;
+
+import vetor.Contato;
+
 public class VetorAcc {
 
     // Desafio: Utilize a classe Lista Ou Vetor Contato e desenvolva os seguintes

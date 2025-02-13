@@ -1,3 +1,5 @@
+package vetor;
+
 public class VetorObjectMain {
     public static void main(String[] args) {
         Contato c1 = new Contato("Kayo", "81986228400", "kayoleanndro2@gmail.com");

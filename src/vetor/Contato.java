@@ -1,3 +1,5 @@
+package vetor;
+
 public class Contato {
     private String nome;
     private String telefone;
