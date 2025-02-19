@@ -2,11 +2,11 @@ package vetor;
 
 import java.util.Arrays;
 
-public class Vetor {
+public class Lista {
     private String[] elementos;
     private int tamanho;
 
-    public Vetor(int capacidade) {
+    public Lista(int capacidade) {
         this.elementos = new String[capacidade];
         this.tamanho = 0;
     }
