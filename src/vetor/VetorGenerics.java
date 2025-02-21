@@ -78,8 +78,8 @@ public class VetorGenerics<T> {
             this.elementos[i + 1] = this.elementos[i];
         }
         this.elementos[posicao] = elemento;
-
-        return false;
+        tamanho++;
+        return true;
     }
 
     // Metodo que só será utilizado dentro da classe vetor
